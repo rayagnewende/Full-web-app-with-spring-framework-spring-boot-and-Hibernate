@@ -1,11 +1,10 @@
 <!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-	    <title>Welcome page</title>
+	    <title>Bienvenue page</title>
 	</head>
 	<body>
-		<h1> ${name} </h1>
-		<h1>${password}</h1>
-		
+		<h1>Bienvenue: ${name}</h1>
+		<a href="todo-list">Aller vers la liste</a>
 	</body>
 </html>
