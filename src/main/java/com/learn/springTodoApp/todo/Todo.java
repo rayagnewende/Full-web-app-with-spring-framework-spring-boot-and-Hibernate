@@ -2,10 +2,14 @@ package com.learn.springTodoApp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Size;
+
 public class Todo {
 	
 	private int id ; 
 	private String username ; 
+	
+	@Size(min = 10, message = "le nombre de caractères doit etre supérieur à 10")
 	private String description ; 
 	private  LocalDate targetDate; 
 	private boolean done ;

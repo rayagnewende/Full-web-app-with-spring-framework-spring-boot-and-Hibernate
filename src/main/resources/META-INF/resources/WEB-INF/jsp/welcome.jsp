@@ -4,7 +4,7 @@
 	    <title>Bienvenue page</title>
 	</head>
 	<body>
-		<h1>Bienvenue: ${name}</h1>
+		<h1>Bienvenue: ${username}</h1>
 		<a href="todo-list">Aller vers la liste</a>
 	</body>
 </html>
