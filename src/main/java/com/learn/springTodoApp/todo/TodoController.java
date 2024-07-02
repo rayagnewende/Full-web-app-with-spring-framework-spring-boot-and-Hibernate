@@ -54,10 +54,39 @@ public class TodoController {
 			return "addTodo"; 
 		}
 		String username = (String) model.get("username"); 
-		todoService.addTodo(username, todo.getDescription(),LocalDate.now().plusYears(1), false);
+		todoService.addTodo(username, todo.getDescription(),todo.getTargetDate(), false);
 		return "redirect:todo-list"; 
 	}
 	
+	
+	@RequestMapping("delete-todo")
+	public String deleteTodo(@RequestParam int id )
+	{ 
+		todoService.deleteTodo(id);
+		return "redirect:todo-list"; 
+	}
+	
+	@RequestMapping(value="update-todo", method =RequestMethod.GET)
+	public String updateTodo(@RequestParam int id, ModelMap model )
+	{ 
+		Todo todo = todoService.findById(id);
+		model.addAttribute("todo", todo); 
+		return "addTodo"; 
+	}
+	
+	
+	@RequestMapping(value="update-todo", method =RequestMethod.POST)
+	public String updateAndSaveTodo( ModelMap model, @Valid Todo todo, BindingResult result )
+	{ 
+		if(result.hasErrors())
+		{
+			return "addTodo"; 
+		}
+		String username = (String) model.get("username"); 
+		todo.setUsername(username);
+		todoService.updateTodo(todo);
+		return "redirect:todo-list"; 
+	}
 	
 	
 	
