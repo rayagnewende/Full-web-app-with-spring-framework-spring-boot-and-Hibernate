@@ -1,12 +1,5 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
-<!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-	<head>
-	    <title>La page de la liste des taches</title>
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	</head>
-	<body>
+         <%@ include file="common/header.jsp" %>
+	     <%@ include file="common/navigation.jsp" %>
 		<div class="container">
 		  <h1 class="text-center my-5">Liste des taches</h1>
 		        <div class="row">
