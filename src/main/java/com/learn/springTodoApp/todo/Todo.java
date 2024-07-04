@@ -2,11 +2,18 @@ package com.learn.springTodoApp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class Todo {
 	
+	@Id
+	@GeneratedValue
 	private int id ; 
+	
 	private String username ; 
 	
 	@Size(min = 10, message = "le nombre de caractères doit etre supérieur à 10")
@@ -16,6 +23,10 @@ public class Todo {
 
 	
 	
+	public Todo() {
+		super();
+	}
+
 	public Todo(int id, String username, String description, LocalDate targetDate, Boolean done) {
 		super();
 		this.id = id;

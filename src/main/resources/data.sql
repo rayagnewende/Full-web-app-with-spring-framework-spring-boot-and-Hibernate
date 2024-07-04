@@ -1,0 +1,1 @@
+insert into todo(id, username, description, target_date, done) values(1001, 'kabore', 'course de yoga', current_date, false); 
